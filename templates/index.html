@@ -1,0 +1,34 @@
+<!-- templates/index.html -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr-FR"  class="supernova"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demande de réquisition</title>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?themeRevisionID=5f7ed99c2c2c7240ba580251"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.26458" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.26458" />
+</head>
+<body>
+
+{% extends "base.html" %}
+{% block content %}
+
+{% if current_user.is_authenticated %}
+
+
+<p>Identification réussie</p>
+
+{% else %}
+<h1 class="title">
+  Outil d'identification
+</h1>
+<h2 class="subtitle">
+  Veuillez vous identfier pour acceder à l'outil
+</h2>
+  {% endif %}
+{% endblock content %}
+
+</body>
+</html>
+<script type="text/javascript">JotForm.forwardToEu=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.25999"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.25999"></script>

@@ -1,0 +1,35 @@
+<!-- templates/login.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <div class="box">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="notification is-danger">
+                Veuillez vous identfier pour acceder à l'outil
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form method="POST" action="/login">
+            <img src="{{url_for('static', filename='img/securite_logo.png')}}" alt="" width="153" height="156" />
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Votre identifiant" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Votre Mot de Passe">
+                </div>
+            </div>
+            <button class="button  is-info is-large " type="reset">Reset</button>
+            <button class="button is-info is-large ">OK</button>
+            <button type="button" class="button is-info is-large " onclick="window.location.href='{{ url_for( 'auth.signup') }}';">Ajout Compte</button>
+            
+        </form>
+    </div>
+</div>
+{% endblock %}
