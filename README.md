@@ -23,9 +23,9 @@ le projet réalisé est une application  de gestion d’utilisateur, elle permet
 
     ```python app_securite.py```
     
-capture 1
+![plot](../main/captures/capture_console.png)
 - connexion à l'application :
 	
 	ouvrez votre navigateur et accéder à l'application en utilisant l'Ulr fourni par le terminal 
 	
-capture 2
+![plot](../main/captures/capture_app.png)
